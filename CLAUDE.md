@@ -33,8 +33,10 @@ Two halves:
 
 - **Outreach hub** — an admin manages the company pitch, personas (prompt templates +
   tone presets), team members, and the Anthropic key; users pair their extension with a
-  short code; every generation is logged for review. Extension-facing API is
-  `/api/pair/*`, `/api/me`, and `/api/generate`.
+  short code; every generation is logged for review. Admins also upload knowledge files
+  (product sheets, case studies, example messages) and define a tone of voice — both
+  feed the generation prompt so drafts understand the products and sound like the
+  sender. Extension-facing API is `/api/pair/*`, `/api/me`, and `/api/generate`.
 - **Dialer** — progressive cold-calling: a central engine works a shared call queue,
   places calls via Twilio with answering-machine detection, and routes each answered
   human straight to a free browser agent over WebRTC. Campaign controls, pacing, and

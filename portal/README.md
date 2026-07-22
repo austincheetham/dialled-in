@@ -10,6 +10,9 @@ Two halves:
 
 - **Outreach hub** — company pitch, personas (prompt templates + tone presets), team
   members, Anthropic key, extension pairing, and a log of every generated draft.
+  Upload files (product sheets, case studies, past messages) and define a tone of
+  voice — generation pulls from both, so drafts understand the products and sound
+  like the sender.
 - **Dialer** — progressive cold-calling: a shared call queue dialled via Twilio with
   answering-machine detection, routing answered humans straight to a free browser
   agent over WebRTC. Campaign controls, pacing, and call history.

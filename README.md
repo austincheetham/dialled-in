@@ -14,7 +14,7 @@ Either way, a human makes the touch — no bulk messaging, no spam automation.
 |------|--------|--------|------------|
 | **Standalone extension** | [`extension/standalone/`](extension/standalone/) | ✅ Working | Chrome extension, bring your own Anthropic API key. Drafts personalised LinkedIn outreach, fully local. |
 | **Connected extension** | [`extension/connected/`](extension/connected/) | 🚧 Planned | Same experience, but generation goes through the portal — no API key on your machine, settings managed by your team. |
-| **Portal** | [`portal/`](portal/) | 🚧 Planned | The hub: web app for teams covering the cold-calling dialer and outreach settings — pitch, personas and tone presets, members, API key, call and message history. |
+| **Portal** | [`portal/`](portal/) | 🚧 Planned | The hub: web app for teams covering the cold-calling dialer and outreach settings — pitch, personas, members, API key, call and message history. Upload your product docs and set your tone of voice, and every generated message understands what you sell and sounds like you. |
 
 ## Quick start (standalone extension)
 
