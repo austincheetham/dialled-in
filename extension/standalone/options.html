@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dialled — Settings</title>
+  <style>
+    :root {
+      --navy: #0E1424; --navy2: #161e33; --coral: #FF4D6D;
+      --white: #F5F5F7; --muted: #7A8599;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; background: var(--navy); color: var(--white);
+      font-family: -apple-system, "Segoe UI", Inter, Roboto, sans-serif;
+      display: flex; justify-content: center; padding: 48px 20px;
+    }
+    main { width: 100%; max-width: 560px; }
+
+    .logo { font-weight: 700; font-size: 26px; letter-spacing: -0.5px; display: inline-flex; align-items: baseline; }
+    .i { position: relative; width: 7px; margin: 0 2px; display: inline-block; height: 20px; }
+    .i .stem { position: absolute; bottom: 1px; left: 1.5px; width: 4px; height: 13px; background: var(--white); display: block; }
+    .i .pip { position: absolute; top: -2px; left: 0; width: 7px; height: 7px; border-radius: 50%; background: var(--coral); display: block; box-shadow: 0 0 0 3px rgba(255,77,109,.3); }
+    .strap { color: var(--muted); font-size: 12px; letter-spacing: 3px; margin: 6px 0 32px; text-transform: uppercase; }
+
+    fieldset { border: 1px solid rgba(122,133,153,.25); border-radius: 12px; padding: 18px; margin: 0 0 20px; }
+    legend { padding: 0 8px; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); }
+
+    label { display: block; font-size: 13px; margin: 14px 0 5px; color: var(--white); }
+    label:first-of-type { margin-top: 2px; }
+    .sub { color: var(--muted); font-size: 12px; font-weight: 400; }
+
+    input, textarea, select {
+      width: 100%; background: var(--navy2); color: var(--white);
+      border: 1px solid rgba(122,133,153,.3); border-radius: 8px;
+      padding: 9px 11px; font-size: 13.5px; font-family: inherit;
+    }
+    input:focus, textarea:focus, select:focus { outline: none; border-color: var(--coral); }
+    textarea { resize: vertical; }
+
+    .row { display: flex; gap: 12px; }
+    .row > div { flex: 1; }
+
+    button {
+      margin-top: 8px; padding: 11px 28px; border: none; border-radius: 10px;
+      background: var(--coral); color: #fff; font-weight: 600; font-size: 14px; cursor: pointer;
+    }
+    button:hover { filter: brightness(1.08); }
+    #status { display: inline-block; margin-left: 14px; font-size: 13px; color: #7ee0a3; opacity: 0; transition: opacity .2s; }
+    #status.show { opacity: 1; }
+    a { color: var(--coral); }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="logo">D<span class="i"><i class="stem"></i><i class="pip"></i></span>alled</div>
+    <p class="strap">LinkedIn message writer · settings</p>
+
+    <fieldset>
+      <legend>API</legend>
+      <label for="apiKey">Anthropic API key
+        <span class="sub">— stored in your Chrome sync storage, sent only to api.anthropic.com. Get one at <a href="https://console.anthropic.com" target="_blank" rel="noreferrer">console.anthropic.com</a>.</span>
+      </label>
+      <input id="apiKey" type="password" placeholder="sk-ant-..." autocomplete="off" />
+
+      <div class="row">
+        <div>
+          <label for="model">Model</label>
+          <select id="model">
+            <option value="claude-haiku-4-5-20251001">Haiku 4.5 — fast &amp; cheap</option>
+            <option value="claude-sonnet-4-6">Sonnet 4.6 — best quality</option>
+          </select>
+        </div>
+        <div>
+          <label for="maxWords">Max message length (words)</label>
+          <input id="maxWords" type="number" min="30" max="200" value="80" />
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>About you</legend>
+      <label for="senderName">Your first name <span class="sub">— used to sign off</span></label>
+      <input id="senderName" type="text" placeholder="Sam" />
+
+      <div class="row">
+        <div>
+          <label for="senderRole">Your role</label>
+          <input id="senderRole" type="text" placeholder="Founder" />
+        </div>
+        <div>
+          <label for="senderCompany">Your company</label>
+          <input id="senderCompany" type="text" placeholder="Dialled" />
+        </div>
+      </div>
+
+      <label for="pitch">What you do &amp; why you reach out
+        <span class="sub">— one or two sentences. The better this is, the better the messages.</span>
+      </label>
+      <textarea id="pitch" rows="3" placeholder="I'm building Dialled, an AI live-coaching dialer for UK SDR teams. I reach out to sales leaders to invite them to our free beta."></textarea>
+    </fieldset>
+
+    <button id="save">Save settings</button>
+    <span id="status">Saved ✓</span>
+  </main>
+  <script src="options.js"></script>
+</body>
+</html>

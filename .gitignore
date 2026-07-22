@@ -1,0 +1,32 @@
+# .NET (portal)
+bin/
+obj/
+*.user
+appsettings.*.local.json
+
+# Local databases
+*.db
+*.db-shm
+*.db-wal
+
+# Node (if the portal or extensions ever grow a build step)
+node_modules/
+
+# Extension packaging output
+releases/
+
+# Editor / OS noise
+.vs/
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store
+
+# Claude Code local settings
+.claude/settings.local.json
+
+# Secrets — never commit keys
+*.pem
+*.pfx
+.env
+.env.*
