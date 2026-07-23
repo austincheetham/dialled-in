@@ -4,20 +4,21 @@
 <PageTitle>Dialled In</PageTitle>
 
 <h1>Dialled In</h1>
+<p class="muted">Cold outreach, done properly. The portal is under construction.</p>
 
-<p class="lead">Cold outreach, done properly. The portal is under construction.</p>
+<div class="spacer"></div>
 
-<p>
+<div class="card" style="max-width: 420px;">
     @if (status is null)
     {
-        <span class="badge bg-secondary">API: checking…</span>
+        <span class="pill">API: checking…</span>
     }
     else
     {
-        <span class="badge bg-success">API: online</span>
-        <small class="text-muted ms-2">@status.Service v@(status.Version)</small>
+        <span class="pill ok"><span class="dot green"></span>API online</span>
+        <div class="sub" style="margin-top: 0.5rem;">@status.Service v@(status.Version)</div>
     }
-</p>
+</div>
 
 @code {
     private PortalStatus? status;
