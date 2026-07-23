@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="Portal.Api/Portal.Api.csproj" />
+  <Project Path="Portal.AppHost/Portal.AppHost.csproj" />
+  <Project Path="Portal.ServiceDefaults/Portal.ServiceDefaults.csproj" />
+  <Project Path="Portal.Web/Portal.Web.csproj" />
+</Solution>

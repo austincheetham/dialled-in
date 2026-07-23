@@ -1,5 +1,5 @@
 {
   "appHost": {
-    "path": "DialledIn.Portal.AppHost/DialledIn.Portal.AppHost.csproj"
+    "path": "Portal.AppHost/Portal.AppHost.csproj"
   }
 }

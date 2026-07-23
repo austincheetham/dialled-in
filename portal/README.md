@@ -5,15 +5,15 @@ for the plan. Currently scaffolding: holding pages only.
 
 | Project | What it is |
 |---------|------------|
-| `DialledIn.Portal.AppHost` | Aspire orchestrator — run this and it launches everything. |
-| `DialledIn.Portal.Web` | Blazor Server frontend (`portal-web`) — holding pages for Dialer, Outreach, Team, Activity, Settings. |
-| `DialledIn.Portal.ApiService` | Web API backend (`portal-api`) — `/api/status` for now; `/api/pair/*`, `/api/me`, `/api/generate` to come. |
-| `DialledIn.Portal.ServiceDefaults` | Shared Aspire wiring (telemetry, health checks, service discovery). |
+| `Portal.AppHost` | Aspire orchestrator — run this and it launches everything. |
+| `Portal.Web` | Blazor Server frontend (`portal-web`) — holding pages for Dialer, Outreach, Team, Activity, Settings. |
+| `Portal.Api` | Web API backend (`portal-api`) — `/api/status` for now; `/api/pair/*`, `/api/me`, `/api/generate` to come. |
+| `Portal.ServiceDefaults` | Shared Aspire wiring (telemetry, health checks, service discovery). |
 
 ## Run
 
 ```powershell
-dotnet run --project DialledIn.Portal.AppHost
+dotnet run --project Portal.AppHost
 ```
 
 The Aspire dashboard opens with both services; click the `portal-web` endpoint for

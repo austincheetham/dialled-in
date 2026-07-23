@@ -1,5 +1,5 @@
-using DialledIn.Portal.Web;
-using DialledIn.Portal.Web.Components;
+using Portal.Web;
+using Portal.Web.Components;
 
 var builder = WebApplication.CreateBuilder(args);
 

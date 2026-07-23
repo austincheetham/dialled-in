@@ -1,4 +1,4 @@
-namespace DialledIn.Portal.Web;
+namespace Portal.Web;
 
 public class PortalApiClient(HttpClient httpClient)
 {

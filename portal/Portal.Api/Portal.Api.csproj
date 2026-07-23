@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\DialledIn.Portal.ServiceDefaults\DialledIn.Portal.ServiceDefaults.csproj" />
+    <ProjectReference Include="..\Portal.ServiceDefaults\Portal.ServiceDefaults.csproj" />
   </ItemGroup>
 
   <ItemGroup>
