@@ -1,0 +1,29 @@
+@page "/"
+@inject PortalApiClient Api
+
+<PageTitle>Dialled In</PageTitle>
+
+<h1>Dialled In</h1>
+
+<p class="lead">Cold outreach, done properly. The portal is under construction.</p>
+
+<p>
+    @if (status is null)
+    {
+        <span class="badge bg-secondary">API: checking…</span>
+    }
+    else
+    {
+        <span class="badge bg-success">API: online</span>
+        <small class="text-muted ms-2">@status.Service v@(status.Version)</small>
+    }
+</p>
+
+@code {
+    private PortalStatus? status;
+
+    protected override async Task OnInitializedAsync()
+    {
+        status = await Api.GetStatusAsync();
+    }
+}

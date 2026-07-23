@@ -1,10 +1,23 @@
 # Dialled In — Portal
 
-Not built yet — see the root `CLAUDE.md` for the plan.
+The hub for the whole platform. .NET 10 Aspire solution — see the root `CLAUDE.md`
+for the plan. Currently scaffolding: holding pages only.
 
-The hub for the whole platform. .NET 10 / ASP.NET Core: Blazor Server admin UI,
-minimal API endpoints for the connected extension (`/api/pair/*`, `/api/me`,
-`/api/generate`), EF Core + SQLite to start.
+| Project | What it is |
+|---------|------------|
+| `DialledIn.Portal.AppHost` | Aspire orchestrator — run this and it launches everything. |
+| `DialledIn.Portal.Web` | Blazor Server frontend (`portal-web`) — holding pages for Dialer, Outreach, Team, Activity, Settings. |
+| `DialledIn.Portal.ApiService` | Web API backend (`portal-api`) — `/api/status` for now; `/api/pair/*`, `/api/me`, `/api/generate` to come. |
+| `DialledIn.Portal.ServiceDefaults` | Shared Aspire wiring (telemetry, health checks, service discovery). |
+
+## Run
+
+```powershell
+dotnet run --project DialledIn.Portal.AppHost
+```
+
+The Aspire dashboard opens with both services; click the `portal-web` endpoint for
+the site.
 
 Two halves:
 
