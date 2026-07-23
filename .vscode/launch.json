@@ -3,18 +3,10 @@
   "configurations": [
     {
       "name": "Aspire (Portal.AppHost)",
-      "type": "coreclr",
+      "type": "aspire",
       "request": "launch",
-      "preLaunchTask": "build portal",
-      "program": "${workspaceFolder}/portal/Portal.AppHost/bin/Debug/net10.0/Portal.AppHost.dll",
-      "cwd": "${workspaceFolder}/portal/Portal.AppHost",
-      "launchSettingsFilePath": "${workspaceFolder}/portal/Portal.AppHost/Properties/launchSettings.json",
-      "launchSettingsProfile": "https",
-      "serverReadyAction": {
-        "action": "openExternally",
-        "pattern": "Login to the dashboard at (\\S+)",
-        "uriFormat": "%s"
-      }
+      "program": "${workspaceFolder}/portal/Portal.AppHost/Portal.AppHost.csproj",
+      "dashboardBrowser": "openExternalBrowser"
     }
   ]
 }
