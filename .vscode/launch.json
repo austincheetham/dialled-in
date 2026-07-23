@@ -3,10 +3,10 @@
   "configurations": [
     {
       "name": "Aspire (Portal.AppHost)",
-      "type": "aspire",
+      "type": "dotnet",
       "request": "launch",
-      "program": "${workspaceFolder}/portal/Portal.AppHost/Portal.AppHost.csproj",
-      "dashboardBrowser": "openExternalBrowser"
+      "preLaunchTask": "build portal",
+      "projectPath": "${workspaceFolder}/portal/Portal.AppHost/Portal.AppHost.csproj"
     }
   ]
 }
