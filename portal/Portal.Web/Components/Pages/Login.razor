@@ -1,0 +1,34 @@
+@page "/"
+@layout EmptyLayout
+@rendermode InteractiveServer
+@inject NavigationManager Nav
+
+<PageTitle>Sign in — Dialled In</PageTitle>
+
+<div class="login-shell">
+    <div class="login-card">
+        <div class="brand login-brand">
+            <span class="wordmark">D<span class="i-letter"><span class="ring-wrap"><span class="ring-dot"></span></span><span class="stem"></span></span>alled&nbsp;In</span>
+        </div>
+
+        <label for="email">Email</label>
+        <input id="email" type="email" @bind="email" placeholder="you@company.com" autocomplete="username" />
+
+        <label for="password">Password</label>
+        <input id="password" type="password" @bind="password" placeholder="••••••••" autocomplete="current-password" />
+
+        <div class="spacer"></div>
+
+        <button class="btn primary lg login-btn" @onclick="SignIn">Sign in</button>
+
+        <div class="login-foot muted">Cold outreach, done properly.</div>
+    </div>
+</div>
+
+@code {
+    private string email = "";
+    private string password = "";
+
+    // No real auth yet — straight into the dashboard. Wire up later.
+    private void SignIn() => Nav.NavigateTo("/dashboard");
+}

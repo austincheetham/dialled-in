@@ -151,6 +151,32 @@ a { color: var(--accent); text-decoration: none; }
 .nav-spacer { flex: 1 1 auto; }
 .nav-foot { font-size: 0.75rem; color: var(--muted); padding: 0.5rem 0.7rem; }
 
+/* ---------- login ---------- */
+.login-shell {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    background:
+        radial-gradient(600px 400px at 50% 30%, rgba(255, 77, 109, 0.07), transparent 70%),
+        var(--bg);
+    padding: 1rem;
+}
+
+.login-card {
+    width: 380px;
+    max-width: 100%;
+    background: var(--bg-raised);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 2rem 2rem 1.5rem;
+    box-shadow: 0 24px 60px -20px rgba(0, 0, 0, 0.6);
+}
+
+.login-brand { justify-content: center; padding: 0 0 1.25rem; }
+.login-brand .wordmark { font-size: 2rem; }
+.login-btn { width: 100%; justify-content: center; }
+.login-foot { text-align: center; font-size: 0.8rem; margin-top: 1.25rem; }
+
 /* ---------- cards / grid ---------- */
 .grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); }
 
