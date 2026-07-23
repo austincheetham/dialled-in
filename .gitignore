@@ -17,7 +17,9 @@ releases/
 
 # Editor / OS noise
 .vs/
-.vscode/
+.vscode/*
+!.vscode/launch.json
+!.vscode/tasks.json
 .idea/
 Thumbs.db
 .DS_Store
